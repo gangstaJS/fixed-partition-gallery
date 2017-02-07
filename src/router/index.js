@@ -5,15 +5,14 @@ import VueResorce from 'vue-resource'
 Vue.use(VueResorce);
 Vue.use(Router)
 
-import Hello from 'components/Hello'
 import Photos from 'components/photos.vue'
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Hello',
-      component: Hello
+      name: Photos,
+      component: Photos
     },
     {
       path: '/photos',

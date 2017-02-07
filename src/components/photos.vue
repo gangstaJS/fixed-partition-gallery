@@ -1,7 +1,7 @@
 <template>
   <div class="container" :style="{height: heightContainer+'px'}">
     <slot v-for="(photo, index) in photos">
-    <img :src="`http://fex.net/show/${token}/${photo.upload_id}?400h`"
+    <img v-lazy="`http://fex.net/show/${token}/${photo.upload_id}?400h`"
          :alt="photo.name" 
          :class="{active: photo.active}"
          :style="{
@@ -36,6 +36,10 @@
     margin-right: 1px;
     margin-top: 1px;
     background: #333;
+  }
+  
+  .container > img[lazy=loading] {
+    background-color: #f1f1f1;
   }
   
   .preview {
@@ -77,9 +81,7 @@ left: positions[index].x+'px'
 import Layout from './fixad-partition'
   
 export default {
-  created() {
-    
-  },
+  // created() {},
   
   computed: {
     clientWidth: function() {
