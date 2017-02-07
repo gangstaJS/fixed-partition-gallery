@@ -254,8 +254,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         });
 
         let elements = __WEBPACK_IMPORTED_MODULE_0__fixad_partition___default()(photos, {
-          containerWidth: this.widthContainer,
-          idealElementHeight: 130,
+          containerWidth: this.widthContainer || 5,
+          idealElementHeight: 120,
           spacing: 2
         });
 
@@ -698,4 +698,4 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
 
 /***/ })
 ],[22]);
-//# sourceMappingURL=app.bed3a30566f539c08cc6.js.map
+//# sourceMappingURL=app.ea9e716002fbbd18c27e.js.map

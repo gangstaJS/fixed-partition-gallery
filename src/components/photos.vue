@@ -129,8 +129,8 @@ export default {
         });
         
         let elements = Layout(photos, {
-            containerWidth: this.widthContainer,
-            idealElementHeight: 130,
+            containerWidth: this.widthContainer || 5,
+            idealElementHeight: 120,
             spacing: 2
         });
         
