@@ -275,9 +275,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
       // close preview
       if (this.currentActiveIndex === index) {
+        this.photos[this.currentActiveIndex].active = false;
         this.currentPreview = null;
         this.currentActiveIndex = null;
-        this.photos[this.currentActiveIndex].active = false;
         return;
       }
 
@@ -698,4 +698,4 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
 
 /***/ })
 ],[22]);
-//# sourceMappingURL=app.26de9d761ffc3cce0e66.js.map
+//# sourceMappingURL=app.bed3a30566f539c08cc6.js.map

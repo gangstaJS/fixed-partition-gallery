@@ -150,9 +150,9 @@ export default {
       
       // close preview
       if(this.currentActiveIndex === index) {
+        this.photos[this.currentActiveIndex].active = false;
         this.currentPreview = null;
         this.currentActiveIndex = null;
-        this.photos[this.currentActiveIndex].active = false;
         return;
       }
       
