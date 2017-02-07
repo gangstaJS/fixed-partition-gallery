@@ -226,7 +226,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   },
 
   mounted() {
-    this.widthContainer = this.$el.clientWidth;
+    this.widthContainer = this.$el.clientWidth - 30; // magic number
 
     this.fetchPhotos();
 
@@ -235,7 +235,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
       let elements = __WEBPACK_IMPORTED_MODULE_0__fixad_partition___default()(this.photos, {
         containerWidth: this.widthContainer || 5,
-        idealElementHeight: 120,
+        idealElementHeight: 130,
         spacing: 2
       });
 
@@ -255,7 +255,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
         let elements = __WEBPACK_IMPORTED_MODULE_0__fixad_partition___default()(photos, {
           containerWidth: this.widthContainer || 5,
-          idealElementHeight: 120,
+          idealElementHeight: 130,
           spacing: 2
         });
 
@@ -698,4 +698,4 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
 
 /***/ })
 ],[22]);
-//# sourceMappingURL=app.ea9e716002fbbd18c27e.js.map
+//# sourceMappingURL=app.c6fc1d404de5c5697325.js.map

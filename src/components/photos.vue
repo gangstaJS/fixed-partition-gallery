@@ -101,7 +101,7 @@ export default {
   },
   
   mounted() {
-    this.widthContainer = this.$el.clientWidth
+    this.widthContainer = this.$el.clientWidth-30; // magic number
     
     this.fetchPhotos();
     
@@ -110,7 +110,7 @@ export default {
       
       let elements = Layout(this.photos, {
           containerWidth: this.widthContainer || 5,
-          idealElementHeight: 120,
+          idealElementHeight: 130,
           spacing: 2
       });
       
@@ -130,7 +130,7 @@ export default {
         
         let elements = Layout(photos, {
             containerWidth: this.widthContainer || 5,
-            idealElementHeight: 120,
+            idealElementHeight: 130,
             spacing: 2
         });
         
