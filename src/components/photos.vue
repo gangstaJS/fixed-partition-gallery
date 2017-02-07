@@ -1,7 +1,7 @@
 <template>
   <div class="container" :style="{height: heightContainer+'px'}">
     <slot v-for="(photo, index) in photos">
-    <img :src="`http://fex.net/show/858909646169/${photo.upload_id}?400h`"
+    <img :src="`http://fex.net/show/${token}/${photo.upload_id}?400h`"
          :alt="photo.name" 
          :class="{active: photo.active}"
          :style="{
@@ -35,6 +35,7 @@
     float: left;
     margin-right: 1px;
     margin-top: 1px;
+    background: #333;
   }
   
   .preview {
@@ -95,6 +96,7 @@ export default {
       currentPreview: null,
       currentPreviewSrc: 'javascript:;',
       currentActiveIndex: null,
+      token: null,
     }
   },
   
@@ -136,6 +138,7 @@ export default {
         this.positions = elements.positions;
         this.heightContainer = elements.height;
         this.widthContainer = elements.width;
+        this.token = response.data.token;
       });
     },
     
@@ -157,7 +160,7 @@ export default {
       if(this.currentActiveIndex !== null) this.photos[this.currentActiveIndex].active = false;
       this.currentActiveIndex = index;
       this.photos[this.currentActiveIndex].active = true;
-      this.currentPreviewSrc = `http://fex.net/show/858909646169/${this.photos[this.currentActiveIndex].upload_id}?400h`
+      this.currentPreviewSrc = `http://fex.net/show/${this.token}/${this.photos[this.currentActiveIndex].upload_id}?400h`
     }
   }
 }
